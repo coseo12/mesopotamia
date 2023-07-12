@@ -1,1 +1,3 @@
-import * as BABYLON from 'babylonjs';
+// import { Engine, Scene } from "@babylonjs/core";
+
+console.log("Hello, World!");
