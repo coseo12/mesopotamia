@@ -1,39 +1,51 @@
 import typescript from "rollup-plugin-typescript2";
 import terser from "@rollup/plugin-terser";
-import html from "rollup-plugin-generate-html-template";
+// import html from "rollup-plugin-generate-html-template";
 import browsersync from "rollup-plugin-browsersync";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 
-const DEV = process.env.BUILD === "development";
+const BUILD = process.env.BUILD;
+
+function getInput() {
+  return BUILD === "production"
+    ? ["./src/index.ts", "./src/core.ts"]
+    : BUILD === "development"
+    ? ["./src/playground.ts"]
+    : ["./src/core.ts"];
+}
 
 function getOutput() {
-  return DEV
+  return BUILD === "production"
     ? [
         {
-          dir: "example",
-          format: "cjs",
-          sourcemap: true,
-          plugins: [
-            browsersync({
-              server: "example",
-            }),
-            html({
-              template: "public/index.html",
-              target: "example/index.html",
-            }),
-          ],
+          dir: "dist",
+          format: "es",
+          sourcemap: false,
         },
       ]
     : [
         {
-          dir: "dist",
-          format: "cjs",
-          sourcemap: false,
+          dir: "example",
+          format: "es",
+          sourcemap: true,
         },
       ];
 }
 
+function getPlugins() {
+  return BUILD === "development"
+    ? [
+        typescript(),
+        terser(),
+        browsersync({
+          server: "example",
+        }),
+      ]
+    : [typescript(), terser(), nodeResolve()];
+}
+
 export default {
-  input: "./src/index.ts",
+  input: getInput(),
   output: getOutput(),
-  plugins: [typescript(), terser()],
+  plugins: getPlugins(),
 };
