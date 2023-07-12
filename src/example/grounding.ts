@@ -1,7 +1,9 @@
 //@ts-ignore
 import BABYLON from "http://localhost:3000/core.js";
 
-const canvas = document.querySelector("#renderCanvas");
+const canvas = document.createElement("canvas");
+canvas.setAttribute("id", "renderCanvas");
+document.body.appendChild(canvas);
 
 const engine = new BABYLON.Engine(canvas, true);
 const scene = new BABYLON.Scene(engine);

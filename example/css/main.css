@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+}
+
+#navi ul {
+  overflow-y: auto;
+}
+
+#navi li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#navi li:hover {
+  background-color: #eee;
+}
+
+#renderCanvas {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+#remote {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

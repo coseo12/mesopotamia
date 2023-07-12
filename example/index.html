@@ -3,24 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DEMO</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-      }
-
-      #renderCanvas {
-        width: 100%;
-        height: 100%;
-        touch-action: none;
-      }
-    </style>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <title>Play Ground</title>
   </head>
   <body>
+    <main>
+      <nav id="navi" role="navigation">
+        <ul>
+          <li data-set="1">Ground the World</li>
+          <li data-set="2">Adding Sound</li>
+          <li data-set="3">Place and Scale a Mesh</li>
+        </ul>
+      </nav>
+      <canvas id="renderCanvas"></canvas>
+      <nav id="remote" role="remote">
+        <ul>
+          <li data-set="1">Ground the World</li>
+          <li data-set="2">Adding Sound</li>
+          <li data-set="3">Place and Scale a Mesh</li>
+        </ul>
+      </nav>
+    </main>
     <script type="module" src="playground.js"></script>
   </body>
 </html>
