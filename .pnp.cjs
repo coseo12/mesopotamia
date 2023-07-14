@@ -33,6 +33,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-terser", "virtual:4904c2ac7f04efb2027b99e90c79594766d28576433d133dcff9d36c2491c50d5a48137b260cd69d9662cbcf9405b4c8e1fc2021a4d761f1990f86485811f57c#npm:0.4.3"],\
             ["@types/node", "npm:20.4.1"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.48"],\
+            ["babylonjs-loaders", "npm:6.12.1"],\
             ["rollup", "npm:3.26.2"],\
             ["rollup-plugin-browsersync", "npm:1.3.3"],\
             ["rollup-plugin-generate-html-template", "virtual:4904c2ac7f04efb2027b99e90c79594766d28576433d133dcff9d36c2491c50d5a48137b260cd69d9662cbcf9405b4c8e1fc2021a4d761f1990f86485811f57c#npm:1.7.0"],\
@@ -727,6 +728,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["axios", "npm:0.21.4"],\
             ["follow-redirects", "virtual:a313c479c5c7e54d9ec8fbeeea69ff640f56b8989ea2dff42351a3fa5c4061fb80a52d8ede0f0826a181a216820c2d2c3f15da881e7fdf31cef1c446e42f0c45#npm:1.15.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["babylonjs", [\
+        ["npm:6.12.1", {\
+          "packageLocation": "./.yarn/unplugged/babylonjs-npm-6.12.1-3a9b887e12/node_modules/babylonjs/",\
+          "packageDependencies": [\
+            ["babylonjs", "npm:6.12.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["babylonjs-gltf2interface", [\
+        ["npm:6.12.1", {\
+          "packageLocation": "./.yarn/cache/babylonjs-gltf2interface-npm-6.12.1-0930eb36fe-c505722528.zip/node_modules/babylonjs-gltf2interface/",\
+          "packageDependencies": [\
+            ["babylonjs-gltf2interface", "npm:6.12.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["babylonjs-loaders", [\
+        ["npm:6.12.1", {\
+          "packageLocation": "./.yarn/cache/babylonjs-loaders-npm-6.12.1-2a93e92170-372f0f0a2c.zip/node_modules/babylonjs-loaders/",\
+          "packageDependencies": [\
+            ["babylonjs-loaders", "npm:6.12.1"],\
+            ["babylonjs", "npm:6.12.1"],\
+            ["babylonjs-gltf2interface", "npm:6.12.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2433,6 +2463,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@rollup/plugin-terser", "virtual:4904c2ac7f04efb2027b99e90c79594766d28576433d133dcff9d36c2491c50d5a48137b260cd69d9662cbcf9405b4c8e1fc2021a4d761f1990f86485811f57c#npm:0.4.3"],\
             ["@types/node", "npm:20.4.1"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.48"],\
+            ["babylonjs-loaders", "npm:6.12.1"],\
             ["rollup", "npm:3.26.2"],\
             ["rollup-plugin-browsersync", "npm:1.3.3"],\
             ["rollup-plugin-generate-html-template", "virtual:4904c2ac7f04efb2027b99e90c79594766d28576433d133dcff9d36c2491c50d5a48137b260cd69d9662cbcf9405b4c8e1fc2021a4d761f1990f86485811f57c#npm:1.7.0"],\

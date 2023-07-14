@@ -579,6 +579,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babylonjs-gltf2interface@npm:^6.12.1":
+  version: 6.12.1
+  resolution: "babylonjs-gltf2interface@npm:6.12.1"
+  checksum: c505722528594857cae242e4bb447ab589945c9ddf87dad61e8dacf75c831f13b36a1ba3bf21e339bf12e669efdd29a3fc475355425fdd1b115c76f354d2eb6c
+  languageName: node
+  linkType: hard
+
+"babylonjs-loaders@npm:^6.12.1":
+  version: 6.12.1
+  resolution: "babylonjs-loaders@npm:6.12.1"
+  dependencies:
+    babylonjs: ^6.12.1
+    babylonjs-gltf2interface: ^6.12.1
+  checksum: 372f0f0a2c3c26cd8d977dc67352ac85668ab7bd269baaebbeddef24b685d779262afd28e98712ab140ff97c75afea57c0381bca76891d01940f4237664bfb7b
+  languageName: node
+  linkType: hard
+
+"babylonjs@npm:^6.12.1":
+  version: 6.12.1
+  resolution: "babylonjs@npm:6.12.1"
+  checksum: 19b0b9c52f427315ba73136d8f8717a5c01366c4659a8e05f105cac51bca712aead94933e963b4f376e9151e306d88fe5b106fb5b91a2f1e1f9196e7416d3048
+  languageName: node
+  linkType: hard
+
 "balanced-match@npm:^1.0.0":
   version: 1.0.2
   resolution: "balanced-match@npm:1.0.2"
@@ -2068,6 +2092,7 @@ __metadata:
     "@rollup/plugin-terser": ^0.4.3
     "@types/node": ^20.4.1
     "@yarnpkg/sdks": ^3.0.0-rc.48
+    babylonjs-loaders: ^6.12.1
     rollup: ^3.26.2
     rollup-plugin-browsersync: ^1.3.3
     rollup-plugin-generate-html-template: ^1.7.0
