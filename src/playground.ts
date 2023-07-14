@@ -8,26 +8,25 @@ const engine = new BABYLON.Engine(canvas, true);
 const scene = new BABYLON.Scene(engine);
 
 BABYLON.OBJFileLoader.OPTIMIZE_WITH_UV = true;
-console.time("start");
-BABYLON.SceneLoader.Append(
-  "http://localhost:3000/assets/",
-  "hongdae.glb",
-  scene,
-  function (scene) {
-    // Create a default arc rotate camera and light.
-    scene.createDefaultCameraOrLight(true, true, true);
-    // The default camera looks at the back of the asset.
-    // Rotate the camera by 180 degrees to the front of the asset.
-    scene.activeCamera.alpha += Math.PI;
-    console.timeEnd("start");
-  }
-);
+
+const url = window.location.href;
+
+const sp = url.split("?")[1].split("=");
+const t = sp[1];
+
+BABYLON.SceneLoader.Append("./assets/", `${t}.glb`, scene, function (scene) {
+  // Create a default arc rotate camera and light.
+  // scene.createDefaultCameraOrLight(true, true, true);
+  // The default camera looks at the back of the asset.
+  // Rotate the camera by 180 degrees to the front of the asset.
+  // scene.activeCamera.alpha += Math.PI;
+});
 
 const camera = new BABYLON.ArcRotateCamera(
   "camera",
   -Math.PI / 2,
   Math.PI / 2.5,
-  10,
+  500, // zoom in out
   new BABYLON.Vector3(0, 0, 0)
 );
 
